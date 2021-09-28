@@ -1,6 +1,10 @@
 
 sudo sysctl fs.protected_regular=0
 
+# if Docker require a root
+
+minikube start --force --driver=docker
+
 root@andrey:~# minikube start --vm-driver=none
 
 # control test
