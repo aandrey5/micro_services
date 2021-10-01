@@ -19,3 +19,6 @@ nginx-deployment   3/3     3            3           19s
 
 
 
+kubectl apply -k /root/manifest/
+
+
