@@ -1,4 +1,30 @@
 
+
+
+# list oa a ports of pod
+
+kubectl get pod <pod name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
+
+
+
+# all routes by ports in a cluster
+
+kubectl get svc --all-namespaces -o json | jq '.items[] | {name:.metadata.name, ns:.metadata.namespace, p:.spec.ports[] } | 
+select( .p.nodePort != null ) | "\(.ns)/\(.name): localhost:\(.p.nodePort) -> \(.p.port) -> \(.p.targetPort)"'
+
+
+
+# parameters of a pod
+
+kubectl describe pod <pod name
+
+kubectl exec <pod name here> -- netstat -tulpn
+
+
+
+
+# setup minikube
+
 sudo sysctl fs.protected_regular=0
 
 # if Docker require a root
