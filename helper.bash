@@ -1,5 +1,9 @@
 
 
+# cheating paper
+
+https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/
+
 
 # list oa a ports of pod
 
